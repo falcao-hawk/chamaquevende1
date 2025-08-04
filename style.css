@@ -21,7 +21,7 @@ header {
 
 /* Estilo para o Logo */
 .site-logo {
-    max-width: 250px;
+    max-width: 290px;
     /* Tamanho máximo do logo */
     height: auto;
     /* Mantém a proporção */
@@ -85,10 +85,14 @@ h3 {
 }
 
 .podcast-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    /* Ocupa a largura total do contêiner pai */
+    height: 180px;
+    /* Defina a altura desejada (ajuste conforme necessário) */
     border-radius: 4px;
     margin-bottom: 10px;
+    object-fit: cover;
+    /* A imagem cobre a área, cortando se necessário */
 }
 
 .podcast-item h3 {
@@ -96,7 +100,7 @@ h3 {
     margin-bottom: 5px;
     font-size: 1.2em;
     text-align: center;
-    color: #fdd835;
+    color: #222;
     /* Título do podcast com a cor principal (amarelo) */
 }
 
@@ -157,10 +161,13 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
-    /* Cor escura para o rodapé para contraste */
     color: #fff;
-    /* Texto branco no rodapé */
     margin-top: 30px;
+
+    /* NOVAS REGRAS PARA CENTRALIZAR O CONTEÚDO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-links a {
@@ -176,6 +183,7 @@ footer {
     /* Tom mais escuro no hover */
 }
 
+
 /* Responsividade Básica */
 @media (max-width: 768px) {
     .podcast-grid {
@@ -185,4 +193,29 @@ footer {
     .podcast-item {
         align-items: center;
     }
+}
+
+.social-links {
+    /* Centraliza os itens dentro da div de links sociais */
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para alinhar os ícones e textos */
+.social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fdd835;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fbc02d;
+}
+
+.social-links a i {
+    font-size: 1.5em;
+    margin-right: 8px;
 }
