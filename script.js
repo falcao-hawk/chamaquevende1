@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             const videoId = item.getAttribute('data-video-id');
             if (videoId) {
-                // CORREÇÃO: Use o domínio correto do YouTube
+
                 youtubeEmbed.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
 
                 podcastsSection.style.display = 'none'; // Esconde a lista de podcasts
